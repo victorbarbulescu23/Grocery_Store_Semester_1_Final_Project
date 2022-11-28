@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Login Screen Example</string>
+    <string name="password_hint">password</string>
+    <string name="username">username</string>
+    <string name="enter_your_password">Enter your password:</string>
+    <string name="enter_your_username">Enter your Username:</string>
+    <string name="enter_button">enter</string>
+    <string name="username_res">Username:</string>
+    <string name="password_res">Password:</string>
+    <string name="half_gator">half gator</string>
+
+    <string name="error_password">Invalid Password. Please try Again</string>
+    <string name="error_login">Invalid Username. Please try Again</string>
+    <string name="success">Login Successful</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="i_m_done_shopping">I\'m done Shopping</string>
+    <string name="does_this_product_contain_gluten">Does this Product contain Gluten?</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_expiration_date">Product Expiration Date</string>
+    <string name="aisle_you_found_the_product_in">Aisle you Found the Product in</string>
+    <string name="number_of_items">Number of Items:</string>
+    <string name="purchase">Purchase</string>
+    <string name="cart_scrollview">cart scrollview</string>
+
+    <string-array name="type_dropdown">
+        <item> Select your Product Type</item>
+        <item> Produce</item>
+        <item> Candy</item>
+        <item> Beverage</item>
+    </string-array>
+</resources>
