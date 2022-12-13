@@ -1,5 +1,6 @@
 package com.example.loginscreenexample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -39,6 +40,10 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, getString(R.string.success), Toast.LENGTH_SHORT).show()
                     loginText.clearAnimation()
                     passwordText.clearAnimation()
+
+                    Intent(this@MainActivity, InputActivity::class.java).also {
+                        startActivity(it)
+                    }
                 }
 
 

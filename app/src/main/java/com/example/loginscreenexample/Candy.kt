@@ -1,3 +1,6 @@
+import android.os.Parcel
+import android.os.Parcelable
+
 //Candy child class, inherits Product and takes in information about what kind of candy is being purchased
 class Candy (shelfLife: Int,
             isHardCandy: Boolean,
@@ -29,6 +32,17 @@ class Candy (shelfLife: Int,
             field = value
         }
 
+    constructor(parcel: Parcel) : this(
+        TODO("shelfLife"),
+        TODO("isHardCandy"),
+        TODO("isGummyCandy"),
+        TODO("isIceCream"),
+        TODO("name"),
+        TODO("aisle"),
+        TODO("nutritionFacts")
+    ) {
+    }
+
     //overrides the getSummary function in Product to output data specifically about Candy
     override fun getSummary() {
         if (isHardCandy){
@@ -55,6 +69,25 @@ class Candy (shelfLife: Int,
                     "Candy Type: Chocolate \n" +
                     "Shelf life: $shelfLife \n" +
                     "Ingredients: ${nutritionFacts.nutritionSummary()} \n")
+        }
+    }
+
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        super.writeToParcel(parcel, flags)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Candy> {
+        override fun createFromParcel(parcel: Parcel): Candy {
+            return Candy(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Candy?> {
+            return arrayOfNulls(size)
         }
     }
 }

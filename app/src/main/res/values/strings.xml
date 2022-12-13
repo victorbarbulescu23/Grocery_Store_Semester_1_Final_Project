@@ -21,6 +21,10 @@
     <string name="number_of_items">Number of Items:</string>
     <string name="purchase">Purchase</string>
     <string name="cart_scrollview">cart scrollview</string>
+    <string name="expiration_date_shelf_life">Expiration Date/Shelf Life</string>
+    <string name="Soda">Soda</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="this_only_applies_if_you_ve_selected_quot_beverage_quot">This only applies if you\'ve selected \"Beverage\"</string>
 
     <string-array name="type_dropdown">
         <item> Select your Product Type</item>

@@ -1,7 +1,11 @@
+import android.os.Parcel
+import android.os.Parcelable
+import androidx.versionedparcelable.ParcelField
+
 //Abstract parent class that contains information about a products name, aisle, and nutrition.
 abstract class Product (name: String,
                         aisle: Int,
-                        nutritionFacts: NutritionFacts){
+                        nutritionFacts: NutritionFacts): Parcelable{
 
     var name: String = ""
         get() = field
@@ -23,4 +27,8 @@ abstract class Product (name: String,
 
     //Abstract fun getSummary() is overriden in child classes to output a summary specific to every product
     abstract fun getSummary()
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+
+    }
 }

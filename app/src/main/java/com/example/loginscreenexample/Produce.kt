@@ -1,4 +1,6 @@
 import java.time.format.DateTimeFormatter
+import android.os.Parcel
+import android.os.Parcelable
 
 //Produce child class, inherits Product
 class Produce (expirationDate: String,
@@ -15,12 +17,38 @@ class Produce (expirationDate: String,
             field = value
         }
 
+    constructor(parcel: Parcel) : this(
+        TODO("expirationDate"),
+        TODO("name"),
+        TODO("aisle"),
+        TODO("nutritionFacts")
+    ) {
+    }
+
     //Overrides the Product getSummary function to specifically output data about produce
     override fun getSummary() {
         println("Name: $name \n" +
                 "Aisle: $aisle \n" +
                 "Ingredients: ${nutritionFacts.nutritionSummary()}" +
                 "Expiration Date: ${expirationDate.format(formatter)}")
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        super.writeToParcel(parcel, flags)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Produce> {
+        override fun createFromParcel(parcel: Parcel): Produce {
+            return Produce(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Produce?> {
+            return arrayOfNulls(size)
+        }
     }
 
 }
